@@ -17,7 +17,7 @@ let AuthModule = AuthModule_1 = class AuthModule {
 };
 AuthModule = AuthModule_1 = __decorate([
     common_1.Module({
-        imports: [users_module_1.UsersModule, passport_1.PassportModule],
+        imports: [users_module_1.UsersModule, passport_1.PassportModule,],
         providers: [auth_service_1.AuthService, local_strategy_1.LocalStrategy],
         exports: [AuthModule_1]
     })

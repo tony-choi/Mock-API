@@ -15,11 +15,11 @@ export class UsersController {
   }
   @Post()
   addUser(
-    @Body('name') name: string,
+    @Body('username') username: string,
     @Body('position') position: string,
     @Body('password') password: string
   ): any{
-    this.usersService.addUsers(name, position, password);
+    this.usersService.addUsers(username, position, password);
   }
 }
 function id(number: any, id: any) {

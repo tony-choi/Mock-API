@@ -12,6 +12,7 @@ const app_controller_1 = require("./app.controller");
 const users_module_1 = require("./users.module");
 const app_service_1 = require("./app.service");
 const auth_module_1 = require("./auth/auth.module");
+const auth_service_1 = require("./auth/auth.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -19,7 +20,7 @@ AppModule = __decorate([
         imports: [users_module_1.UsersModule,
             auth_module_1.AuthModule],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [app_service_1.AppService, auth_service_1.AuthService],
     })
 ], AppModule);
 exports.AppModule = AppModule;
