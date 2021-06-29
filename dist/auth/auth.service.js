@@ -16,8 +16,8 @@ let AuthService = class AuthService {
     constructor(usersService) {
         this.usersService = usersService;
     }
-    async validateUser(id, pass) {
-        const user = await this.usersService.getUser(id);
+    async validateUser(username, pass) {
+        const user = await this.usersService.findOne(username);
         if (user && user.password === pass) {
             return user;
         }

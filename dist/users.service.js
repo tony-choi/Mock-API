@@ -10,8 +10,8 @@ exports.UsersService = void 0;
 const common_1 = require("@nestjs/common");
 const data = require("./sample-data.json");
 let UsersService = class UsersService {
-    async findOne(id) {
-        return data.users.find(user => user.id === id);
+    async findOne(username) {
+        return data.users.find(user => user.username === username);
     }
     getUsers() {
         return data.users;
@@ -25,7 +25,7 @@ let UsersService = class UsersService {
     }
     addUsers(name, position, password) {
         const newUser = {
-            "name": name,
+            "username": name,
             "position": position,
             "password": password,
             "id": data.users.length + 1

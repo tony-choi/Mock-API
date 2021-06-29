@@ -1,13 +1,13 @@
 {
     "users" : [
         {
-            "name" : "Tony",
+            "username" : "Tony",
             "position" : "swe-intern",
             "password" : "a",
             "id" : 1
         },
         {
-            "name" : "Paul",
+            "username" : "Paul",
             "position" : "senior swe",
             "password" : "11111111",
             "id" : 2

@@ -4,8 +4,8 @@ import * as data from './sample-data.json';
 
 @Injectable()
 export class UsersService {
-  async findOne(id: number): Promise<any> {
-    return data.users.find(user => user.id === id);
+  async findOne(username: string): Promise<any> {
+    return data.users.find(user => user.username === username);
   }
     getUsers(): any {
         return data.users;
@@ -20,7 +20,7 @@ export class UsersService {
       }
       addUsers(name: string, position: string, password: string) {
         const newUser = {
-          "name" : name,
+          "username" : name,
           "position" : position,
           "password" : password,
           "id" : data.users.length + 1

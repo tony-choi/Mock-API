@@ -25,8 +25,8 @@ let UsersController = class UsersController {
     getUser(id) {
         return this.usersService.getUser(id);
     }
-    addUser(name, position, password) {
-        this.usersService.addUsers(name, position, password);
+    addUser(username, position, password) {
+        this.usersService.addUsers(username, position, password);
     }
 };
 __decorate([
@@ -44,7 +44,7 @@ __decorate([
 ], UsersController.prototype, "getUser", null);
 __decorate([
     common_1.Post(),
-    __param(0, common_1.Body('name')),
+    __param(0, common_1.Body('username')),
     __param(1, common_1.Body('position')),
     __param(2, common_1.Body('password')),
     __metadata("design:type", Function),
