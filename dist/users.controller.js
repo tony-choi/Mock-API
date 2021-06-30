@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersController = void 0;
 const common_1 = require("@nestjs/common");
 const users_service_1 = require("./users.service");
+const jwt_auth_guard_1 = require("./auth/jwt-auth.guard");
 let UsersController = class UsersController {
     constructor(usersService) {
         this.usersService = usersService;
@@ -28,6 +29,9 @@ let UsersController = class UsersController {
     addUser(username, position, password) {
         this.usersService.addUsers(username, position, password);
     }
+    editProfile(req, position, password) {
+        return this.usersService.editProfile(req.user, position, password);
+    }
 };
 __decorate([
     common_1.Get(),
@@ -37,26 +41,33 @@ __decorate([
 ], UsersController.prototype, "getUsers", null);
 __decorate([
     common_1.Get(":id"),
-    __param(0, common_1.Param('id')),
+    __param(0, common_1.Param("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Object)
 ], UsersController.prototype, "getUser", null);
 __decorate([
     common_1.Post(),
-    __param(0, common_1.Body('username')),
-    __param(1, common_1.Body('position')),
-    __param(2, common_1.Body('password')),
+    __param(0, common_1.Body("username")),
+    __param(1, common_1.Body("position")),
+    __param(2, common_1.Body("password")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String]),
     __metadata("design:returntype", Object)
 ], UsersController.prototype, "addUser", null);
+__decorate([
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
+    common_1.Put(),
+    __param(0, common_1.Request()),
+    __param(1, common_1.Body("position")),
+    __param(2, common_1.Body("password")),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, String, String]),
+    __metadata("design:returntype", Object)
+], UsersController.prototype, "editProfile", null);
 UsersController = __decorate([
     common_1.Controller("users"),
     __metadata("design:paramtypes", [users_service_1.UsersService])
 ], UsersController);
 exports.UsersController = UsersController;
-function id(number, id) {
-    throw new Error('Function not implemented.');
-}
 //# sourceMappingURL=users.controller.js.map

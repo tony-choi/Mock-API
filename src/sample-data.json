@@ -1,22 +1,22 @@
 {
-    "users" : [
-        {
-            "username" : "Tony",
-            "position" : "swe-intern",
-            "password" : "a",
-            "id" : 1
-        },
-        {
-            "username" : "Paul",
-            "position" : "senior swe",
-            "password" : "11111111",
-            "id" : 2
-        },
-        {
-            "username" : "Tim",
-            "position" : "swe-intern",
-            "password" : "a",
-            "id" : 3
-        }
-    ]
+  "users": [
+    {
+      "username": "Tony",
+      "position": "swe-intern",
+      "password": "a",
+      "id": 1
+    },
+    {
+      "username": "Paul",
+      "position": "senior swe",
+      "password": "11111111",
+      "id": 2
+    },
+    {
+      "username": "Tim",
+      "position": "swe-intern",
+      "password": "a",
+      "id": 3
+    }
+  ]
 }

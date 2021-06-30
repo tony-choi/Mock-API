@@ -30,7 +30,7 @@ let AppController = class AppController {
 };
 __decorate([
     common_1.UseGuards(local_auth_guard_1.LocalAuthGuard),
-    common_1.Post('auth/login'),
+    common_1.Post("auth/login"),
     __param(0, common_1.Request()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
@@ -38,7 +38,7 @@ __decorate([
 ], AppController.prototype, "login", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Get('profile'),
+    common_1.Get("profile"),
     __param(0, common_1.Request()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
