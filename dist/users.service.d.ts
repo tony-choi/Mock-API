@@ -3,4 +3,5 @@ export declare class UsersService {
     getUsers(): any;
     getUser(n: number): any;
     addUsers(name: string, position: string, password: string): void;
+    editProfile(user: any, position: string, pass: string): any;
 }
